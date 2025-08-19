@@ -12,6 +12,8 @@ source:
 build:
   number: 3
   skip: True  # [win]
+  run_exports:
+    - {{ pin_subpackage('fastpath', max_pin='x.x') }}  
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -46,3 +48,5 @@ extra:
   recipe-maintainers:
     - linsalrob
     - deprekate
+  additional-platforms:
+    - linux-aarch64
