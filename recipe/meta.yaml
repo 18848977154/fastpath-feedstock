@@ -11,20 +11,16 @@ source:
 
 build:
   number: 4
-  noarch: generic
-  skip: True  # [win]
-  #  run_exports:
-  #    - {{ pin_subpackage('fastpath', max_pin='x.x') }}  
+  noarch: generic  
+  #  skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}      
   host:
     - python
     - pip
-    - setuptools      
   run:
     - python
 
@@ -51,5 +47,3 @@ extra:
   recipe-maintainers:
     - linsalrob
     - deprekate
-      # additional-platforms:
-      #    - linux-aarch64
