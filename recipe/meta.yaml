@@ -11,7 +11,7 @@ source:
 
 build:
   number: 4
-  #  noarch: generic
+  noarch: generic
   skip: True  # [win]
   #  run_exports:
   #    - {{ pin_subpackage('fastpath', max_pin='x.x') }}  
